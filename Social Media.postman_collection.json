@@ -1,0 +1,1012 @@
+{
+	"info": {
+		"_postman_id": "a9cb44ad-ac67-4c68-b108-d2e14721aa1d",
+		"name": "Social Media",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25071027"
+	},
+	"item": [
+		{
+			"name": "registeration",
+			"item": [
+				{
+					"name": "SignUP",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\":\"nada maged\",\r\n  \"Email\":\"nadamaged200gmail.com\",\r\n  \"age\":10,\r\n  \"password\":\"Nada//23\",\r\n  \"phone\":\"01112663780\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/auth/signUP",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"auth",
+								"signUP"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"Email\":\"nadamaged200@gmail.com\",\r\n  \"password\":\"Nada//23\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/auth/login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "confirm email",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"Email\":\"nadamaged200@gmail.com\",\r\n\"code\":\"P_UiDm\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/auth/confirm",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"auth",
+								"confirm"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "send code for reset password",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"Email\":\"nadamaged200@gmail.com\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/auth/sendcode",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"auth",
+								"sendcode"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "reset password",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"Email\":\"nadamaged200@gmail.com\",\r\n\"password\":\"nn123nn\",\r\n\"code\":\"OAP1i0\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/auth/reset",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"auth",
+								"reset"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "get user profile",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Hamada__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MTc0MjEyZjcyNTUyZmJmMjQxNDAwMCIsIkVtYWlsIjoibmFkYW1hZ2VkNTc1QGdtYWlsLmNvbSIsImlhdCI6MTY5NjAzMzU2MCwiZXhwIjoxNjk2MTE5OTYwfQ.cbQqVI0Pn5PHzpqOYPO8JGMEcjxnL-DZCvfa-DNXe-0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/user/getuser",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"getuser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update user",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Hamada__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MTc0MjEyZjcyNTUyZmJmMjQxNDAwMCIsIkVtYWlsIjoibmFkYW1hZ2VkNTc1QGdtYWlsLmNvbSIsImlhdCI6MTY5NjAzMzU2MCwiZXhwIjoxNjk2MTE5OTYwfQ.cbQqVI0Pn5PHzpqOYPO8JGMEcjxnL-DZCvfa-DNXe-0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "nada",
+									"type": "text"
+								},
+								{
+									"key": "Email",
+									"value": "nadamaged200@gmail.com",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "age",
+									"value": "11",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/D:/180 things/1 Joj7zejs22i83DqB_d-HUw.jpeg",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/user/update",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add profile pic",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Hamada__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MTc0MjEyZjcyNTUyZmJmMjQxNDAwMCIsIkVtYWlsIjoibmFkYW1hZ2VkNTc1QGdtYWlsLmNvbSIsImlhdCI6MTY5NjAzMzU2MCwiZXhwIjoxNjk2MTE5OTYwfQ.cbQqVI0Pn5PHzpqOYPO8JGMEcjxnL-DZCvfa-DNXe-0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/D:/180 things/215409263_4103435163076285_8345994424375250244_n.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/user/updateprofilePIC",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"updateprofilePIC"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add cover PIC",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Hamada__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MTc0MjEyZjcyNTUyZmJmMjQxNDAwMCIsIkVtYWlsIjoibmFkYW1hZ2VkNTc1QGdtYWlsLmNvbSIsImlhdCI6MTY5NjAzMzU2MCwiZXhwIjoxNjk2MTE5OTYwfQ.cbQqVI0Pn5PHzpqOYPO8JGMEcjxnL-DZCvfa-DNXe-0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/D:/180 things/242279653_4324221457664320_8043790202298536778_n.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/user/updateCoverPIC",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"updateCoverPIC"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "post",
+			"item": [
+				{
+					"name": "addpost",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Hamada__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MTc0MjEyZjcyNTUyZmJmMjQxNDAwMCIsIkVtYWlsIjoibmFkYW1hZ2VkMjAwQGdtYWlsLmNvbSIsImlhdCI6MTY5NjA4NzIxMiwiZXhwIjoxNjk2MTczNjEyfQ.cYQrv2X-dPVH_rCjfo96L-lAPeC3k4yio6veDKXoxYI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "content",
+									"value": "hello im nada now9",
+									"type": "text"
+								},
+								{
+									"key": "Images",
+									"type": "file",
+									"src": "/D:/180 things/81QPZ4Vgb7L._AC_UL320_.jpg"
+								},
+								{
+									"key": "privacy",
+									"value": "only me",
+									"type": "text"
+								},
+								{
+									"key": "Videos",
+									"type": "file",
+									"src": "/C:/Users/Nada/Downloads/vecteezy_countdown-from-1-to-3-loop-animation-video-transparent_20762698_804.mp4",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/post/addpost",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"post",
+								"addpost"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update post",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Hamada__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MTc0MjEyZjcyNTUyZmJmMjQxNDAwMCIsIkVtYWlsIjoibmFkYW1hZ2VkMjAwQGdtYWlsLmNvbSIsImlhdCI6MTY5NjA4NzIxMiwiZXhwIjoxNjk2MTczNjEyfQ.cYQrv2X-dPVH_rCjfo96L-lAPeC3k4yio6veDKXoxYI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "content",
+									"value": "heloooo",
+									"type": "text"
+								},
+								{
+									"key": "Images",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "privacy",
+									"value": "Public",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/post/update/651840d495b1bfbabfdfcf4f",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"post",
+								"update",
+								"651840d495b1bfbabfdfcf4f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Post",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Hamada__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MTc0MjEyZjcyNTUyZmJmMjQxNDAwMCIsIkVtYWlsIjoibmFkYW1hZ2VkMjAwQGdtYWlsLmNvbSIsImlhdCI6MTY5NjA4NzIxMiwiZXhwIjoxNjk2MTczNjEyfQ.cYQrv2X-dPVH_rCjfo96L-lAPeC3k4yio6veDKXoxYI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/post/delete/65184e925d10e08aeacaa17e",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"post",
+								"delete",
+								"65184e925d10e08aeacaa17e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get posts by id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Hamada__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MTc0MjEyZjcyNTUyZmJmMjQxNDAwMCIsIkVtYWlsIjoibmFkYW1hZ2VkMjAwQGdtYWlsLmNvbSIsImlhdCI6MTY5NjA4NzIxMiwiZXhwIjoxNjk2MTczNjEyfQ.cYQrv2X-dPVH_rCjfo96L-lAPeC3k4yio6veDKXoxYI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/post/getposts/65181a81246b2cec7478ecf9",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"post",
+								"getposts",
+								"65181a81246b2cec7478ecf9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all posts",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Hamada__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MTc0MjEyZjcyNTUyZmJmMjQxNDAwMCIsIkVtYWlsIjoibmFkYW1hZ2VkMjAwQGdtYWlsLmNvbSIsImlhdCI6MTY5NjA4NzIxMiwiZXhwIjoxNjk2MTczNjEyfQ.cYQrv2X-dPVH_rCjfo96L-lAPeC3k4yio6veDKXoxYI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/post/getposts?page=1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"post",
+								"getposts"
+							],
+							"query": [
+								{
+									"key": "size",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET YESTERDAY POSTS",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Hamada__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MTc0MjEyZjcyNTUyZmJmMjQxNDAwMCIsIkVtYWlsIjoibmFkYW1hZ2VkMjAwQGdtYWlsLmNvbSIsImlhdCI6MTY5NjA4NzIxMiwiZXhwIjoxNjk2MTczNjEyfQ.cYQrv2X-dPVH_rCjfo96L-lAPeC3k4yio6veDKXoxYI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/post/getYesterdayPosts",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"post",
+								"getYesterdayPosts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET TODAY POSTS",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Hamada__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MTc0MjEyZjcyNTUyZmJmMjQxNDAwMCIsIkVtYWlsIjoibmFkYW1hZ2VkMjAwQGdtYWlsLmNvbSIsImlhdCI6MTY5NjA4NzIxMiwiZXhwIjoxNjk2MTczNjEyfQ.cYQrv2X-dPVH_rCjfo96L-lAPeC3k4yio6veDKXoxYI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/post/getTodayPosts",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"post",
+								"getTodayPosts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "like post",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Hamada__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MTc0MjEyZjcyNTUyZmJmMjQxNDAwMCIsIkVtYWlsIjoibmFkYW1hZ2VkMjAwQGdtYWlsLmNvbSIsImlhdCI6MTY5NjA4NzIxMiwiZXhwIjoxNjk2MTczNjEyfQ.cYQrv2X-dPVH_rCjfo96L-lAPeC3k4yio6veDKXoxYI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/post/like/65181af8246b2cec7478ecfc",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"post",
+								"like",
+								"65181af8246b2cec7478ecfc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "unlike post",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Hamada__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MTc0MjEyZjcyNTUyZmJmMjQxNDAwMCIsIkVtYWlsIjoibmFkYW1hZ2VkMjAwQGdtYWlsLmNvbSIsImlhdCI6MTY5NjA4NzIxMiwiZXhwIjoxNjk2MTczNjEyfQ.cYQrv2X-dPVH_rCjfo96L-lAPeC3k4yio6veDKXoxYI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/post/unlike/65181b76246b2cec7478ecff",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"post",
+								"unlike",
+								"65181b76246b2cec7478ecff"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "comment",
+			"item": [
+				{
+					"name": "add comment",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Hamada__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MTc0MjEyZjcyNTUyZmJmMjQxNDAwMCIsIkVtYWlsIjoibmFkYW1hZ2VkMjAwQGdtYWlsLmNvbSIsImlhdCI6MTY5NjA4NzIxMiwiZXhwIjoxNjk2MTczNjEyfQ.cYQrv2X-dPVH_rCjfo96L-lAPeC3k4yio6veDKXoxYI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "CommentBody",
+									"value": "nice photo",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/D:/180 things/81QPZ4Vgb7L._AC_UL320_.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/comment/addcomment/65181a81246b2cec7478ecf9",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"comment",
+								"addcomment",
+								"65181a81246b2cec7478ecf9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update comment",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Hamada__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MTc0MjEyZjcyNTUyZmJmMjQxNDAwMCIsIkVtYWlsIjoibmFkYW1hZ2VkMjAwQGdtYWlsLmNvbSIsImlhdCI6MTY5NjA4NzIxMiwiZXhwIjoxNjk2MTczNjEyfQ.cYQrv2X-dPVH_rCjfo96L-lAPeC3k4yio6veDKXoxYI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "CommentBody",
+									"value": "nice",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/D:/180 things/1 Joj7zejs22i83DqB_d-HUw.jpeg"
+								},
+								{
+									"key": "postID",
+									"value": "65181a81246b2cec7478ecf9",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/comment/update/651879a0c976a34984c0b56d",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"comment",
+								"update",
+								"651879a0c976a34984c0b56d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete comment",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Hamada__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MTc0MjEyZjcyNTUyZmJmMjQxNDAwMCIsIkVtYWlsIjoibmFkYW1hZ2VkMjAwQGdtYWlsLmNvbSIsImlhdCI6MTY5NjA4NzIxMiwiZXhwIjoxNjk2MTczNjEyfQ.cYQrv2X-dPVH_rCjfo96L-lAPeC3k4yio6veDKXoxYI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "postID",
+									"value": "65181a81246b2cec7478ecf9",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/comment/delete?commentID=6518b982436a24f95605416c&postID=65181a81246b2cec7478ecf9",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"comment",
+								"delete"
+							],
+							"query": [
+								{
+									"key": "commentID",
+									"value": "6518b982436a24f95605416c"
+								},
+								{
+									"key": "postID",
+									"value": "65181a81246b2cec7478ecf9"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "like comment",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Hamada__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MTc0MjEyZjcyNTUyZmJmMjQxNDAwMCIsIkVtYWlsIjoibmFkYW1hZ2VkMjAwQGdtYWlsLmNvbSIsImlhdCI6MTY5NjA4NzIxMiwiZXhwIjoxNjk2MTczNjEyfQ.cYQrv2X-dPVH_rCjfo96L-lAPeC3k4yio6veDKXoxYI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/comment/like/6518b927436a24f95605415f",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"comment",
+								"like",
+								"6518b927436a24f95605415f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "like comment Copy",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Hamada__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MTc0MjEyZjcyNTUyZmJmMjQxNDAwMCIsIkVtYWlsIjoibmFkYW1hZ2VkMjAwQGdtYWlsLmNvbSIsImlhdCI6MTY5NjA4NzIxMiwiZXhwIjoxNjk2MTczNjEyfQ.cYQrv2X-dPVH_rCjfo96L-lAPeC3k4yio6veDKXoxYI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/comment/UnLike/6518b927436a24f95605415f",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"comment",
+								"UnLike",
+								"6518b927436a24f95605415f"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "reply",
+			"item": [
+				{
+					"name": "add reply",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Hamada__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MTc0MjEyZjcyNTUyZmJmMjQxNDAwMCIsIkVtYWlsIjoibmFkYW1hZ2VkMjAwQGdtYWlsLmNvbSIsImlhdCI6MTY5NjA4NzIxMiwiZXhwIjoxNjk2MTczNjEyfQ.cYQrv2X-dPVH_rCjfo96L-lAPeC3k4yio6veDKXoxYI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "ReplyBody",
+									"value": "okay good",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "CommentID",
+									"value": "6518b7e0ff22208cfe4de036",
+									"type": "text"
+								},
+								{
+									"key": "postID",
+									"value": "65181a81246b2cec7478ecf9",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/D:/180 things/1 Joj7zejs22i83DqB_d-HUw.jpeg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/reply/add",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"reply",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update reply",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Hamada__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MTc0MjEyZjcyNTUyZmJmMjQxNDAwMCIsIkVtYWlsIjoibmFkYW1hZ2VkMjAwQGdtYWlsLmNvbSIsImlhdCI6MTY5NjA4NzIxMiwiZXhwIjoxNjk2MTczNjEyfQ.cYQrv2X-dPVH_rCjfo96L-lAPeC3k4yio6veDKXoxYI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "ReplyBody",
+									"value": "okay ",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "commentID",
+									"value": "6518b7e0ff22208cfe4de036",
+									"type": "text"
+								},
+								{
+									"key": "postID",
+									"value": "65181a81246b2cec7478ecf9",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/D:/180 things/5ffb68f05b10a2e2b8b64ea20f4c7e6c.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/reply/update/6518d5f20faf732404b19568",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"reply",
+								"update",
+								"6518d5f20faf732404b19568"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Reply",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Hamada__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MTc0MjEyZjcyNTUyZmJmMjQxNDAwMCIsIkVtYWlsIjoibmFkYW1hZ2VkMjAwQGdtYWlsLmNvbSIsImlhdCI6MTY5NjA4NzIxMiwiZXhwIjoxNjk2MTczNjEyfQ.cYQrv2X-dPVH_rCjfo96L-lAPeC3k4yio6veDKXoxYI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{url}}/reply/delete?commentID=6518b7e0ff22208cfe4de036&postID=65181a81246b2cec7478ecf9&replyID=6518d5f20faf732404b19568",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"reply",
+								"delete"
+							],
+							"query": [
+								{
+									"key": "commentID",
+									"value": "6518b7e0ff22208cfe4de036"
+								},
+								{
+									"key": "postID",
+									"value": "65181a81246b2cec7478ecf9"
+								},
+								{
+									"key": "replyID",
+									"value": "6518d5f20faf732404b19568"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "like reply",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Hamada__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MTc0MjEyZjcyNTUyZmJmMjQxNDAwMCIsIkVtYWlsIjoibmFkYW1hZ2VkMjAwQGdtYWlsLmNvbSIsImlhdCI6MTY5NjA4NzIxMiwiZXhwIjoxNjk2MTczNjEyfQ.cYQrv2X-dPVH_rCjfo96L-lAPeC3k4yio6veDKXoxYI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{url}}/reply/like?commentID=6518b7e0ff22208cfe4de036&replyID=6518d584f21b7571478c74f1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"reply",
+								"like"
+							],
+							"query": [
+								{
+									"key": "commentID",
+									"value": "6518b7e0ff22208cfe4de036"
+								},
+								{
+									"key": "replyID",
+									"value": "6518d584f21b7571478c74f1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "unlike reply",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Hamada__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MTc0MjEyZjcyNTUyZmJmMjQxNDAwMCIsIkVtYWlsIjoibmFkYW1hZ2VkMjAwQGdtYWlsLmNvbSIsImlhdCI6MTY5NjA4NzIxMiwiZXhwIjoxNjk2MTczNjEyfQ.cYQrv2X-dPVH_rCjfo96L-lAPeC3k4yio6veDKXoxYI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{url}}/reply/Unlike?commentID=6518b7e0ff22208cfe4de036&replyID=6518d584f21b7571478c74f1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"reply",
+								"Unlike"
+							],
+							"query": [
+								{
+									"key": "commentID",
+									"value": "6518b7e0ff22208cfe4de036"
+								},
+								{
+									"key": "replyID",
+									"value": "6518d584f21b7571478c74f1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://localhost:3000"
+		}
+	]
+}
